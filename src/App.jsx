@@ -3,11 +3,12 @@ import './App.css'
 import { Helmet } from 'react-helmet';
 
 import blog from "./assets/the-financial-posts.png";
-import resume from "./assets/cv-app.png";
+import resume from "./assets/resume-app.png";
 import weather from "./assets/weather-app.png";
 import graph from "./assets/graph.png";
 import minHeap from "./assets/min-heap.png";
 import battleship from "./assets/battleship.png"
+import shoppingCart from "./assets/shopping-cart.png"
 
 
 function App() {
@@ -151,11 +152,15 @@ function App() {
         <h1 className="section-2" id="projects">Projects</h1>
         <div className="main-container">
           <div className="project-container">
-            <img src={blog} alt="project image" />
-            <h1>Finance Website</h1>
-            <div>Created a finance website with HTML, CSS, and JavaScript</div>
+            <img src={shoppingCart} alt="project image" />
+            <h1>Shopping Cart Website</h1>
+            <div>shopping cart application that lets users browse products, view details, and add items to their cart. Powered by the FakeStore API</div>
             <h3>Built with:</h3>
             <div className="tools-container">
+              <div>
+                <i className="devicon-react-plain" style={{ fontSize: '50px', color: 'white' }}></i>
+                <p>React</p>
+              </div>
               <div>
                 <i className="devicon-html5-plain" style={{ fontSize: '50px', color: 'white' }}></i>
                 <p>HTML</p>
@@ -170,7 +175,8 @@ function App() {
               </div>
             </div>
             <div className="button-container">
-              <a href="https://thefinancialposts.com/" target="_blank">Live Demo</a>
+              <a href="https://2f1020f0.shopping-cart-3b6.pages.dev/" target="_blank">Live Demo</a>
+              <a href="https://github.com/Josue-Caballero-Sanchez/shopping-cart" target="_blank">GitHub Page</a>
             </div>
           </div>
 
@@ -236,9 +242,9 @@ function App() {
           </div>
 
           <div className="project-container">
-            <img src={weather} alt="project image" />
-            <h1>Weather Webpage</h1>
-            <div>Weather app created with HTML, CSS, and JavaScript. Uses API calls to get data</div>
+            <img src={blog} alt="project image" />
+            <h1>Finance Website/Blog</h1>
+            <div>Created a finance website with HTML, CSS, and JavaScript</div>
             <h3>Built with:</h3>
             <div className="tools-container">
               <div>
@@ -255,8 +261,7 @@ function App() {
               </div>
             </div>
             <div className="button-container">
-              <a href="https://josue-caballero-sanchez.github.io/weather-app/" target="_blank">Live Demo</a>
-              <a href="https://github.com/Josue-Caballero-Sanchez/weather-app" target="_blank">GitHub Page</a>
+              <a href="https://thefinancialposts.com/" target="_blank">Live Demo</a>
             </div>
           </div>
 
