@@ -12,12 +12,6 @@ import profilePic from "./assets/IMG_0357.jpeg"
 
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
   window.addEventListener("click", (e) => {
     const navbarLinks = document.querySelector(".navbar-links");
     const headerToggleButton = document.querySelector(".header-toggle-button");
@@ -65,16 +59,10 @@ function App() {
       <Header/>
 
       <main className="main">
-        {/* 
-        <p className={`name ${isLoaded ? "animated" : ""}`}>Josue Caballero Sanchez</p>
-        <p className={`name occupation ${isLoaded ? "animated" : ""}`}>Computer Scientist</p>
-        <p className="arrow">&#8595;</p>
-        */}
-
         <div className="profile-container">
           <img src={profilePic} alt="profile picture" className="profile-picture" />
           <div>
-            <h1>Hi, I'm Josue Caballero Sanchez &#128075;</h1>
+            <h1>Hi, I'm Josue Caballero Sanchez <span className="waving-hand">&#128075;</span></h1>
             <h2>Computer Scientist and Web Developer</h2>
           </div>
         </div>
@@ -87,66 +75,66 @@ function App() {
 
         <div className="socials-container">
           <a href="https://www.canva.com/design/DAGZSz1DKPA/BF90PXtg_x-cwpR9-9C-6g/view?utm_content=DAGZSz1DKPA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2dedfb5ab5" target='_blank' className="socials-button">Resume</a>
-          <a href="https://www.linkedin.com/in/josue-caballero-sanchez-8aaab9276/" target='_blank' className="socials-icon"><i className="devicon-linkedin-plain" style={{ fontSize: '30px', color: 'white' }}></i></a>
-          <a href="https://github.com/Josue-Caballero-Sanchez" target='_blank' className="socials-icon"><i className="devicon-github-original" style={{ fontSize: '30px', color: 'white' }}></i></a>
+          <a href="https://www.linkedin.com/in/josue-caballero-sanchez-8aaab9276/" target='_blank' className="socials-icon"><i className="devicon-linkedin-plain colored" style={{ fontSize: '30px' }}></i></a>
+          <a href="https://github.com/Josue-Caballero-Sanchez" target='_blank' className="socials-icon"><i className="devicon-github-original" style={{ fontSize: '30px' }}></i></a>
         </div>
 
         <h1 className="section-2">Tools and Skills</h1>
         <div className="container">
           <div className="skills-container">
-            <i className="devicon-react-original" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-react-original colored" style={{ fontSize: '40px'}}></i>
             <p>React</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-html5-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-html5-plain colored" style={{ fontSize: '40px'}}></i>
             <p>HTML</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-css3-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-css3-plain colored" style={{ fontSize: '40px' }}></i>
             <p>CSS</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-javascript-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-javascript-plain colored" style={{ fontSize: '40px' }}></i>
             <p>JavaScript</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-c-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-c-plain colored" style={{ fontSize: '40px' }}></i>
             <p>C</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-cplusplus-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-cplusplus-plain colored" style={{ fontSize: '40px' }}></i>
             <p>C++</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-csharp-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-csharp-plain colored" style={{ fontSize: '40px' }}></i>
             <p>C#</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-java-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-java-plain colored" style={{ fontSize: '40px' }}></i>
             <p>Java</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-webpack-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-webpack-plain colored" style={{ fontSize: '40px' }}></i>
             <p>Webpack</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-firebase-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-firebase-plain colored" style={{ fontSize: '40px'}}></i>
             <p>Firebase</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-postgresql-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-postgresql-plain colored" style={{ fontSize: '40px' }}></i>
             <p>PostgreSQL</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-linux-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-linux-plain" style={{ fontSize: '40px' }}></i>
             <p>Linux</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-git-plain" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-git-plain colored" style={{ fontSize: '40px' }}></i>
             <p>Git</p>
           </div>
           <div className="skills-container">
-            <i className="devicon-github-original" style={{ fontSize: '40px', color: 'white' }}></i>
+            <i className="devicon-github-original" style={{ fontSize: '40px' }}></i>
             <p>GitHub</p>
           </div>
         </div>

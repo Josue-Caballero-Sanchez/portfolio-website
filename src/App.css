@@ -139,7 +139,6 @@ html {
 
 main {
   background: linear-gradient(90deg, rgba(40, 40, 40, 1), rgb(20, 20, 20, 1));
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 
   display: flex;
   flex-direction: column;
@@ -151,12 +150,30 @@ main {
   padding-bottom: 8rem;
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95); 
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02); /* Slight bounce effect */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1); 
+  }
+}
+
 .profile-container {
   align-self: stretch;
   display: flex;
   align-items: center;
   gap: 3rem;
   margin-bottom: 5rem; 
+
+  opacity: 0;
+  animation: fadeInUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards; 
 }
 
 .profile-picture {
@@ -176,67 +193,30 @@ main {
   font-weight: normal;
 }
 
-@keyframes fadeInSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(10rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(0deg); }
+  60% { transform: rotate(20deg); }
+  80% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
-@keyframes fadeInSlideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes arrowLoop {
+@keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(-5rem);
-  }
-  10% {
-    opacity: 1; 
-  }
-  90% {
-    opacity: 0;
-    transform: translateY(5rem);
   }
   100% {
-    opacity: 0;
-    transform: translateY(-5rem);
+    opacity: 1;
   }
 }
 
-.name {
-  font-size: 5rem;
-  font-weight: bold;
+.waving-hand {
+  display: inline-block;
+  animation: wave 1s ease-in-out 2, fadeIn 0.5s ease forwards;
+  transform-origin: bottom right;
   opacity: 0;
-  animation: fadeInSlideUp 1s ease-in-out forwards;
-  text-align: center;
-}
-
-.name.occupation {
-  margin-top: 1rem;
-  opacity: 0; 
-  animation: fadeInSlideUp 1s ease-in-out forwards;
-  animation-delay: 1s; 
-  padding-bottom: 15rem;
-}
-
-.arrow {
-  font-size: 3rem;
-  opacity: 0; 
-  animation: arrowLoop 1.75s ease-in-out infinite;
-  animation-delay: 2s; 
+  animation-delay: 1s, 1s;
 }
 
 .socials-container {
@@ -245,6 +225,7 @@ main {
   margin-top: 1rem;
   align-items: center;
   gap: 2rem;
+  animation: fadeInUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards; 
 }
 
 .socials-container a {
@@ -269,23 +250,19 @@ main {
 }
 
 .socials-icon:hover {
-  opacity: 0.7;
-}
-
-.section {
-  padding-bottom: 2rem;
-  align-self: stretch;
-  margin-top: 5rem;
+  opacity: 0.6;
 }
 
 .section-2 {
   align-self: stretch;
   margin-top: 3rem;
   margin-bottom: 3rem;
+
 }
 
 .paragraph {
   font-size: 1.6rem;
+  animation: fadeInUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards; 
 }
 
 .container {
@@ -490,18 +467,6 @@ main {
 
   .profile-container h2 {
     font-size: 1.6rem;
-  }
-
-  .name.occupation {
-    padding-bottom: 0;
-  }
-
-  .arrow{
-    display: none;
-  }
-
-  .name {
-    font-size: 3.5rem;
   }
 
   .container {
