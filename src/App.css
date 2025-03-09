@@ -77,8 +77,10 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(270deg, rgba(30, 30, 30, 1), rgb(10, 10, 10, 1));
+  background: linear-gradient(90deg, rgba(40, 40, 40, 1), rgb(20, 20, 20, 1));
   padding: 1rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
 }
 
 .header-toggle-button{
@@ -105,7 +107,6 @@ html {
 
 .header-text{
   font-size: 2rem;
-  margin-left: 3rem;
 }
 
 .header-logo{
@@ -114,6 +115,7 @@ html {
 
 .navbar-links{
   display: flex;
+  gap: 1rem;
   margin-right: 2rem;
 }
 
@@ -127,7 +129,7 @@ html {
   text-decoration: none;
   color: white;
   font-size: 1.6rem;
-  padding: 1rem;
+  padding: 1.25rem;
   display: block;
 }
 
@@ -143,10 +145,35 @@ main {
   flex-direction: column;
   align-items: center;
   font-size: 1.6rem;
-  padding-top: 22.5rem;
-  padding-left: 10rem;
-  padding-right: 8rem;
+  padding-top: 5rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
   padding-bottom: 8rem;
+}
+
+.profile-container {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 5rem; 
+}
+
+.profile-picture {
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.profile-container h1 {
+  margin-bottom: 0.5rem;
+}
+
+.profile-container h2 {
+  margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 @keyframes fadeInSlideUp {
@@ -212,44 +239,83 @@ main {
   animation-delay: 2s; 
 }
 
+.socials-container {
+  display: flex;
+  align-self: stretch;
+  margin-top: 1rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.socials-container a {
+  text-decoration: none;
+  color: white; 
+}
+
+.socials-container .socials-button {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.socials-container .socials-button:hover {
+  background-color: rgb(85, 85, 85);
+  cursor: pointer;
+}
+
+.socials-icon:hover {
+  opacity: 0.7;
+}
+
 .section {
   padding-bottom: 2rem;
-  margin-top: 15rem;
-  border-bottom: 1px solid white;
   align-self: stretch;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
 }
 
 .section-2 {
-  padding-bottom: 2rem;
-  margin-top: 5rem;
-  border-bottom: 1px solid white;
   align-self: stretch;
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
 .paragraph {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .container {
   align-self: stretch;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2rem;
 }
 
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 2rem;
   background-color: black;
   border-radius: 1.25rem;
-  padding: 2.5rem;
-  gap: 5rem;
+  padding: 1.5rem;
   box-shadow: 0px 0px 10px black;
+  flex: 1;
 }
 
+.skills-container i {
+  transition: transform 0.2s ease-in-out;
+}
+
+.skills-container i:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+}
 
 .center-text {
   text-align: center;
@@ -264,7 +330,7 @@ main {
 }
 
 .skills-container div:hover{
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .main-container {
@@ -346,12 +412,16 @@ main {
   .navbar{
       flex-direction: column;
       padding: 1.5rem;
+      padding-left: 0;
+      padding-right: 0;
   }
 
   .main-header-container{
       max-width: 100%;
       width: 100%;
       justify-content: space-between;
+      padding-left: 2rem;
+      padding-right: 2rem;
   }
 
   .header-logo{
@@ -364,7 +434,7 @@ main {
   }
 
   .header-text {
-    margin-left: 0.5rem;
+    margin-left: 0;
   }
 
   .navbar-links{
@@ -372,29 +442,54 @@ main {
       max-height: 0;
       overflow: hidden;
       width: 100%;
-      
-      transform: translateX(-100%);
-      transform-origin: top;
+      margin-right: 0;
+      opacity: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease-in-out, transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+
+      transition: max-height 0.25s ease-in-out, margin 0.25s ease-in-out, opacity 0.25s ease-in-out;
   }
 
   .navbar-links > li > a{
       padding: 1.25rem;
+      margin-bottom: 1.5rem;
+  }
+
+  .navbar-links > li {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .navbar-links.visible {
       max-height: 20rem;
-      transform: translateX(0);
-      margin-top: 1rem;
+      margin-top: 2rem;
+      opacity: 1;
+      box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
   }
-
+  
+  
   main {
     margin-top: -0.1rem;
-    padding-top: 12rem;
+    padding-top: 5rem;
     padding-bottom: 12rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .profile-container {
+    gap: 1.25rem;
+  }
+
+  .profile-picture {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .profile-container h1 {
+    font-size: 1.95rem;
+  }
+
+  .profile-container h2 {
+    font-size: 1.6rem;
   }
 
   .name.occupation {
@@ -409,8 +504,13 @@ main {
     font-size: 3.5rem;
   }
 
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .skills-container {
-    margin-bottom: 5rem;
+   gap: 1rem;
+   padding: 1rem;
   }
 
   .project-container > img {
@@ -419,5 +519,36 @@ main {
 
   .main-container {
     flex-direction: column;
+  }
+}
+
+@media (min-width: 525px) and (max-width: 800px){
+  .profile-container h1 {
+    font-size: 3rem;
+  }
+
+  .profile-container h2 {
+    font-size: 2rem;
+  }
+
+  .profile-picture {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1250px){
+  .navbar {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  main {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
