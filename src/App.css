@@ -294,6 +294,13 @@ main {
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
 }
 
+.work-container {
+  align-self: stretch;
+  padding-left: 3rem;
+  border-left: 1px solid white;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
 .center-text {
   text-align: center;
 }
@@ -312,23 +319,50 @@ main {
 
 .main-container {
   display: flex;
-  justify-content: space-around;
   align-self: stretch;
   flex-wrap: wrap;
   gap: 3rem;
+}
+
+.light-grey-small {
+  color: lightgray;
+  font-size: 1.3rem;
+}
+
+.spacing {
+  margin-bottom: 0.5rem;
+}
+
+.work-description {
+  margin-left: 1.25rem;
 }
 
 .project-container {
   background-color: black;
   border-radius: 1.25rem;
   padding: 1.5rem;
-  gap: 2.5rem;
+  gap: 1.25rem;
   box-shadow: 0px 0px 10px black;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  max-width: 43rem;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-container:hover {
+  transform: scale(1.005); 
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); 
+}
+
+.project-info-container p{
+  font-size: 1.3rem;
+}
+
+.project-info-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .tools-container {
@@ -337,51 +371,38 @@ main {
 }
 
 .tools-container div {
-  transition: transform 0.2s ease-in-out;
-}
-
-.tools-container div:hover {
-  transform: scale(1.1); 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .project-container > img {
-  max-width: 40rem;
+  max-width: 35rem;
 }
 
 .button-container {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
 .button-container > a {
-  text-decoration: none;
   color: white;
+  background-color: transparent;
   border: 1px solid white;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
-.button-container > a:hover {
-  box-shadow: 0px 0px 10px white;
-}
-
-.main-container > p,
-.main-container > a {
+  border-radius: 0.75rem;
   text-decoration: none;
-  color: white;
-  border: 1px solid white;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  font-size: 2rem;
-  flex: 1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+  min-width: 10rem;
   text-align: center;
 }
 
-.main-container > p:hover,
-.main-container > a:hover {
-  box-shadow: 0px 0px 10px white;
+.button-container > a:hover {
+  background-color: rgb(85, 85, 85);
+  cursor: pointer;
 }
-
 
 
 /* Mobile Styles*/
@@ -471,6 +492,7 @@ main {
 
   .container {
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 
   .skills-container {
@@ -478,12 +500,40 @@ main {
    padding: 1rem;
   }
 
+  .project-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .project-info-container {
+    gap: 2rem;
+  }
+
+  .project-info-container h3 {
+    font-size: 2.5rem;
+  }
+
+  .project-info-container p {
+    font-size: 1.6rem;
+  }
+
+  .button-container > a {
+    font-size: 1.6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .tools-container {
+    justify-content: center;
+  }
+
   .project-container > img {
     max-width: 100%;
   }
-
-  .main-container {
-    flex-direction: column;
+  
+  .button-container {
+    flex-direction: row;
   }
 }
 
@@ -500,7 +550,19 @@ main {
     width: 15rem;
     height: 15rem;
   }
+
+  .container {
+    gap: 2rem;
+  }
 }
+
+@media (min-width: 730px) and (max-width: 800px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 1rem;
+  }
+} 
 
 @media (min-width: 801px) and (max-width: 1250px){
   .navbar {
@@ -515,5 +577,201 @@ main {
 
   .container {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .project-container > img {
+    max-width: 25rem;
+  }
+
+  .project-info-container {
+    gap: 0.75rem;
+  }
+}
+
+@media (min-width: 925px) and (max-width: 1250px){
+  .project-container > img {
+    max-width: 35rem;
+  }
+
+  .project-info-container {
+    gap: 0;
+  }
+
+  .project-container {
+    gap: 2rem;
+  }
+} 
+
+@media (min-width: 801px) and (max-width: 820px){
+  .project-container > img {
+    max-width: 22rem;
+  }
+}
+
+@media (min-width: 1300px){ 
+  .navbar {
+    padding-left: 27rem;
+    padding-right: 27rem;
+  }
+
+  main {
+    padding-left: 27rem;
+    padding-right: 27rem;
+  }
+}
+
+@media (min-width: 1425px){
+  .navbar {
+    padding-left: 31rem;
+    padding-right: 31rem;
+  }
+
+  main {
+    padding-left: 31rem;
+    padding-right: 31rem;
+  }
+}
+
+@media (min-width: 1500px){
+  .navbar {
+    padding-left: 34rem;
+    padding-right: 34rem;
+  }
+
+  main {
+    padding-left: 34rem;
+    padding-right: 34rem;
+  }
+}
+
+@media (min-width: 1600px){
+  .navbar {
+    padding-left: 40rem;
+    padding-right: 40rem;
+  }
+
+  main {
+    padding-left: 40rem;
+    padding-right: 40rem;
+  }
+}
+
+@media (min-width: 1700px){
+  .navbar {
+    padding-left: 45rem;
+    padding-right: 45rem;
+  }
+
+  main {
+    padding-left: 45rem;
+    padding-right: 45rem;
+  }
+}
+
+@media (min-width: 1800px){
+  .navbar {
+    padding-left: 50rem;
+    padding-right: 50rem;
+  }
+
+  main {
+    padding-left: 50rem;
+    padding-right: 50rem;
+  }
+}
+
+@media (min-width: 1900px){
+  .navbar {
+    padding-left: 55rem;
+    padding-right: 55rem;
+  }
+
+  main {
+    padding-left: 55rem;
+    padding-right: 55rem;
+  }
+}
+
+@media (min-width: 2000px){
+  .navbar {
+    padding-left: 60rem;
+    padding-right: 60rem;
+  }
+
+  main {
+    padding-left: 60rem;
+    padding-right: 60rem;
+  }
+}
+
+@media (min-width: 2150px){
+  .navbar {
+    padding-left: 65rem;
+    padding-right: 65rem;
+  }
+
+  main {
+    padding-left: 65rem;
+    padding-right: 65rem;
+  }
+}
+
+@media (min-width: 2300px){
+  .navbar {
+    padding-left: 70rem;
+    padding-right: 70rem;
+  }
+
+  main {
+    padding-left: 70rem;
+    padding-right: 70rem;
+  }
+}
+
+@media (min-width: 2450px){
+  .navbar {
+    padding-left: 75rem;
+    padding-right: 75rem;
+  }
+
+  main {
+    padding-left: 75rem;
+    padding-right: 75rem;
+  }
+}
+
+@media (min-width: 2600px){
+  .navbar {
+    padding-left: 85rem;
+    padding-right: 85rem;
+  }
+
+  main {
+    padding-left: 85rem;
+    padding-right: 85rem;
+  }
+}
+
+@media (min-width: 2800px){
+  .navbar {
+    padding-left: 95rem;
+    padding-right: 95rem;
+  }
+
+  main {
+    padding-left: 95rem;
+    padding-right: 95rem;
+  }
+}
+
+@media (min-width: 3000px){
+  .navbar {
+    padding-left: 105rem;
+    padding-right: 105rem;
+  }
+
+  main {
+    padding-left: 105rem;
+    padding-right: 105rem;
   }
 }
