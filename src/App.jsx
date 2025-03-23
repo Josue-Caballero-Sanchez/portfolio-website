@@ -237,6 +237,23 @@ function App() {
           </div>
 
           <div className="project-container">
+            <img src={graph} alt="project image" />
+            <div className="project-info-container">
+              <h3>Graph Data Structure</h3>
+              <p className="project-description">This project implements a graph data structure using JGraphT and Graphviz as well as JUnit for testing. It includes functionalities to create, modify, and query graphs as well as exporting them</p>
+              <div className="tools-container">
+              <div>
+                  <i className="devicon-java-plain colored" style={{ fontSize: '35px' }}></i>
+                  <p>Java</p>
+                </div>
+              </div>
+            </div>
+            <div className="button-container">
+              <a href="https://github.com/Josue-Caballero-Sanchez/graph-data-structure" target="_blank">GitHub Page</a>
+            </div>
+          </div>
+
+          <div className="project-container">
             <img src={encrypt} alt="project image" />
             <div className="project-info-container">
               <h3>Encryption Service</h3>
@@ -262,23 +279,6 @@ function App() {
             </div>
             <div className="button-container">
               <a href="https://github.com/Josue-Caballero-Sanchez/encryption-service" target="_blank">GitHub Page</a>
-            </div>
-          </div>
-
-          <div className="project-container">
-            <img src={graph} alt="project image" />
-            <div className="project-info-container">
-              <h3>Graph Data Structure</h3>
-              <p className="project-description">This project implements a graph data structure using JGraphT and Graphviz as well as JUnit for testing. It includes functionalities to create, modify, and query graphs as well as exporting them</p>
-              <div className="tools-container">
-              <div>
-                  <i className="devicon-java-plain colored" style={{ fontSize: '35px' }}></i>
-                  <p>Java</p>
-                </div>
-              </div>
-            </div>
-            <div className="button-container">
-              <a href="https://github.com/Josue-Caballero-Sanchez/graph-data-structure" target="_blank">GitHub Page</a>
             </div>
           </div>
 
