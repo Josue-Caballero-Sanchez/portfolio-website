@@ -125,6 +125,14 @@ function App() {
             <p>PostgreSQL</p>
           </div>
           <div className="skills-container">
+            <i className="devicon-tailwindcss-original colored" style={{ fontSize: '40px' }}></i>
+            <p>Tailwind</p>
+          </div>
+          <div className="skills-container">
+            <i className="devicon-dot-net-plain colored" style={{ fontSize: '40px' }}></i>
+            <p>.Net</p>
+          </div>
+          <div className="skills-container">
             <i className="devicon-linux-plain" style={{ fontSize: '40px' }}></i>
             <p>Linux</p>
           </div>
@@ -239,12 +247,12 @@ function App() {
                   <p>C#</p>
                 </div>
                 <div>
-                  <i className="devicon-html5-plain colored" style={{ fontSize: '35px' }}></i>
-                  <p>HTML</p>
+                  <i className="devicon-dot-net-plain colored" style={{ fontSize: '35px' }}></i>
+                  <p>.Net</p>
                 </div>
                 <div>
-                  <i className="devicon-css3-plain colored" style={{ fontSize: '35px' }}></i>
-                  <p>CSS</p>
+                  <i className="devicon-html5-plain colored" style={{ fontSize: '35px' }}></i>
+                  <p>HTML</p>
                 </div>
                 <div>
                   <i className="devicon-javascript-plain colored" style={{ fontSize: '35px' }}></i>
