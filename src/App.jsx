@@ -196,7 +196,7 @@ function App() {
               Mounted, balanced, and repaired tires for consumer and commercial vehicles
             </li>
             <li>
-              Worked with customers and learned how to help and communicate with customers
+              Provided customer service and collaborated effectively in a team-oriented environment
             </li>
           </ul>
         </div>
