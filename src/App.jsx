@@ -43,7 +43,7 @@ function App() {
           </div>
 
           <ul className="navbar-links">
-            <li><a href="https://www.canva.com/design/DAGnEF-Atts/a65XY8LHoT90292wKyat8A/view?utm_content=DAGnEF-Atts&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h07916405e6" onClick={handleHeaderButtonClick} target='_blank'>Resume</a></li>
+            <li><a href="https://www.canva.com/design/DAGpIipUkQU/5gvoO54v3nLZfh1KftXwpQ/view?utm_content=DAGpIipUkQU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h00289307b7" onClick={handleHeaderButtonClick} target='_blank'>Resume</a></li>
             <li><a href="#experience" onClick={handleHeaderButtonClick}>Experience</a></li>
             <li><a href="#projects" onClick={handleHeaderButtonClick}>Projects</a></li>
           </ul>
@@ -69,12 +69,12 @@ function App() {
         <p className="paragraph">
             Hi there! I'm a 22 year old computer scientist located in Glendale, Arizona. I am a recent graduate from 
             Arizona State University and have a strong expertise in web design, Java, C++, C#, and IT. Currently 
-            working as an IT Intern at the City of Phoenix Water Services Department, where I assist technicians in 
-            delivering technical support via ServiceNow and enhance internal operations by developing C#/.NET and PowerShell scripts.
+            working as an IT Intern with the City of Phoenix Water Services Department, where I assist technicians in 
+            delivering technical support via ServiceNow and enhance internal operations by developing PowerShell scripts.
         </p>
 
         <div className="socials-container">
-          <a href="https://www.canva.com/design/DAGZSz1DKPA/BF90PXtg_x-cwpR9-9C-6g/view?utm_content=DAGZSz1DKPA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2dedfb5ab5" target='_blank' className="socials-button">Resume</a>
+          <a href="https://www.canva.com/design/DAGpIipUkQU/5gvoO54v3nLZfh1KftXwpQ/view?utm_content=DAGpIipUkQU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h00289307b7" target='_blank' className="socials-button">Resume</a>
           <a href="https://www.linkedin.com/in/josue-caballero-sanchez-8aaab9276/" target='_blank' className="socials-icon"><i className="devicon-linkedin-plain colored" style={{ fontSize: '30px' }}></i></a>
           <a href="https://github.com/Josue-Caballero-Sanchez" target='_blank' className="socials-icon"><i className="devicon-github-original" style={{ fontSize: '30px' }}></i></a>
         </div>
@@ -162,7 +162,7 @@ function App() {
               for employees using ServiceNow
             </li>
             <li>
-             Collaborated on and created C#/.NET and PowerShell scripts to support internal operations within 
+             Collaborated on and created PowerShell scripts to support internal operations within 
              the Water Services Department
             </li>
           </ul>
@@ -171,7 +171,7 @@ function App() {
         <br />
 
         <div className="work-container">
-          <p className="light-grey-small">Mar 2024 - Present | remote</p>
+          <p className="light-grey-small">Mar 2024 - May 2025 | Remote</p>
           <h3>Data Annotation</h3>
           <p className="spacing">Programmer - AI Trainer</p>
           <ul className="work-description">
