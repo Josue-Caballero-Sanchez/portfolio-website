@@ -333,12 +333,12 @@ main {
 
 .toggle-button-not-selected {
   background-color: white;
+  color: black;
 }
 
 .toggle-button-selected {
   background-color: black;
   color: white;
-  color: black;
 }
 
 .fade-in {
