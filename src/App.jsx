@@ -1,6 +1,6 @@
-import { React, useEffect } from 'react'
-import './App.css'
-import { Helmet } from 'react-helmet';
+import { React, useState } from "react";
+import "./App.css";
+import { Helmet } from "react-helmet";
 
 import blog from "./assets/the-financial-posts.png";
 import graph from "./assets/graph.png";
@@ -9,13 +9,18 @@ import shoppingCart from "./assets/shopping-cart.png";
 import profilePic from "./assets/IMG_0357.jpeg";
 import encrypt from "./assets/encryption-thumbnail.png";
 
-
 function App() {
+  const [isSelected, SetIsSelected] = useState(false);
+  const [isFading, SetIsFading] = useState(false);
+
   window.addEventListener("click", (e) => {
     const navbarLinks = document.querySelector(".navbar-links");
     const headerToggleButton = document.querySelector(".header-toggle-button");
 
-    if (!navbarLinks.contains(e.target) && !headerToggleButton.contains(e.target)) {
+    if (
+      !navbarLinks.contains(e.target) &&
+      !headerToggleButton.contains(e.target)
+    ) {
       navbarLinks.classList.remove("visible");
     }
   });
@@ -25,17 +30,55 @@ function App() {
     navbarLinks.classList.toggle("visible");
   }
 
+  function HandleToggleButtonClick(e) {
+    if (
+      (!isSelected && e.target.id === "experience-button") ||
+      (isSelected && e.target.id === "education-button")
+    ) {
+      return;
+    }
+
+    //SetIsSelected(!isSelected)
+    SetIsFading(true);
+
+    setTimeout(() => {
+      SetIsSelected(!isSelected);
+      SetIsFading(false);
+    }, 200);
+
+    document
+      .getElementById("education-button")
+      .classList.toggle("toggle-button-selected");
+    document
+      .getElementById("education-button")
+      .classList.toggle("toggle-button-not-selected");
+    document
+      .getElementById("experience-button")
+      .classList.toggle("toggle-button-not-selected");
+    document
+      .getElementById("experience-button")
+      .classList.toggle("toggle-button-selected");
+  }
+
   function Header() {
     return (
       <>
         <Helmet>
-          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+          />
         </Helmet>
 
         <nav className="navbar">
           <div className="main-header-container">
             <p className="header-text">Josue C</p>
-            <a href="#" className="header-toggle-button" onClick={handleHeaderButtonClick}>
+            <a
+              href="#"
+              className="header-toggle-button"
+              onClick={handleHeaderButtonClick}
+            >
               <div className="bar"></div>
               <div className="bar"></div>
               <div className="bar"></div>
@@ -43,127 +86,48 @@ function App() {
           </div>
 
           <ul className="navbar-links">
-            <li><a href="https://www.canva.com/design/DAGpIipUkQU/5gvoO54v3nLZfh1KftXwpQ/view?utm_content=DAGpIipUkQU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h00289307b7" onClick={handleHeaderButtonClick} target='_blank'>Resume</a></li>
-            <li><a href="#experience" onClick={handleHeaderButtonClick}>Experience</a></li>
-            <li><a href="#projects" onClick={handleHeaderButtonClick}>Projects</a></li>
+            <li>
+              <a
+                href="https://www.canva.com/design/DAGpIipUkQU/5gvoO54v3nLZfh1KftXwpQ/view?utm_content=DAGpIipUkQU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h00289307b7"
+                onClick={handleHeaderButtonClick}
+                target="_blank"
+              >
+                Resume
+              </a>
+            </li>
+            <li>
+              <a href="#experience" onClick={handleHeaderButtonClick}>
+                Experience
+              </a>
+            </li>
+            <li>
+              <a href="#projects" onClick={handleHeaderButtonClick}>
+                Projects
+              </a>
+            </li>
           </ul>
         </nav>
       </>
-    )
+    );
   }
 
-
-  return (
-    <>
-      <Header/>
-
-      <main className="main">
-        <div className="profile-container">
-          <img src={profilePic} alt="profile picture" className="profile-picture" />
-          <div>
-            <h1>Hi, I'm Josue Caballero Sanchez <span className="waving-hand">&#128075;</span></h1>
-            <h2>Computer Scientist and Web Developer</h2>
-          </div>
-        </div>
-        
-        <p className="paragraph">
-            Hi there! I'm a 22 year old computer scientist located in Glendale, Arizona. I am a recent graduate from 
-            Arizona State University and have a strong expertise in web design, Java, C++, C#, and IT. Currently 
-            working as an IT Intern with the City of Phoenix Water Services Department, where I assist technicians in 
-            delivering technical support via ServiceNow and enhance internal operations by developing PowerShell scripts.
-        </p>
-
-        <div className="socials-container">
-          <a href="https://www.canva.com/design/DAGpIipUkQU/5gvoO54v3nLZfh1KftXwpQ/view?utm_content=DAGpIipUkQU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h00289307b7" target='_blank' className="socials-button">Resume</a>
-          <a href="https://www.linkedin.com/in/josue-caballero-sanchez-8aaab9276/" target='_blank' className="socials-icon"><i className="devicon-linkedin-plain colored" style={{ fontSize: '30px' }}></i></a>
-          <a href="https://github.com/Josue-Caballero-Sanchez" target='_blank' className="socials-icon"><i className="devicon-github-original" style={{ fontSize: '30px' }}></i></a>
-        </div>
-
-        <h1 className="section-2">Tools and Skills</h1>
-        <div className="container">
-          <div className="skills-container">
-            <i className="devicon-react-original colored" style={{ fontSize: '40px'}}></i>
-            <p>React</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-html5-plain colored" style={{ fontSize: '40px'}}></i>
-            <p>HTML</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-css3-plain colored" style={{ fontSize: '40px' }}></i>
-            <p>CSS</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-javascript-plain colored" style={{ fontSize: '40px' }}></i>
-            <p>JavaScript</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-c-plain colored" style={{ fontSize: '40px' }}></i>
-            <p>C</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-cplusplus-plain colored" style={{ fontSize: '40px' }}></i>
-            <p>C++</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-csharp-plain colored" style={{ fontSize: '40px' }}></i>
-            <p>C#</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-java-plain colored" style={{ fontSize: '40px' }}></i>
-            <p>Java</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-webpack-plain colored" style={{ fontSize: '40px' }}></i>
-            <p>Webpack</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-firebase-plain colored" style={{ fontSize: '40px'}}></i>
-            <p>Firebase</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-postgresql-plain colored" style={{ fontSize: '40px' }}></i>
-            <p>PostgreSQL</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-tailwindcss-original colored" style={{ fontSize: '40px' }}></i>
-            <p>Tailwind</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-dot-net-plain colored" style={{ fontSize: '40px' }}></i>
-            <p>.Net</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-powershell-plain" style={{ fontSize: '40px' }}></i>
-            <p>PowerShell</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-linux-plain" style={{ fontSize: '40px' }}></i>
-            <p>Linux</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-git-plain colored" style={{ fontSize: '40px' }}></i>
-            <p>Git</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-github-original" style={{ fontSize: '40px' }}></i>
-            <p>GitHub</p>
-          </div>
-        </div>
-
-        <h1 className="section-2" id="experience">Work Experience</h1>
+  function WorkExperience() {
+    return (
+      <>
+        <h1 className="experience-section">Work Experience</h1>
         <div className="work-container">
           <p className="light-grey-small">May 2025 - Present | Phoenix, Az</p>
           <h3>City of Phoenix Water Services Department</h3>
           <p className="spacing">IT Intern</p>
           <ul className="work-description">
             <li>
-              Provided technical support and troubleshooting by assisting technicians resolve IT infrastructure issues 
-              for employees using ServiceNow
+              Provided technical support and troubleshooting by assisting
+              technicians resolve IT infrastructure issues for employees using
+              ServiceNow
             </li>
             <li>
-             Collaborated on and created PowerShell scripts to support internal operations within 
-             the Water Services Department
+              Collaborated on and created PowerShell scripts to support internal
+              operations within the Water Services Department
             </li>
           </ul>
         </div>
@@ -176,11 +140,13 @@ function App() {
           <p className="spacing">Programmer - AI Trainer</p>
           <ul className="work-description">
             <li>
-              Conducted in-depth evaluations of coding solutions generated by AI models across various
-              programming languages, including but not limited to Python, Java, C++, C# and JavaScript
+              Conducted in-depth evaluations of coding solutions generated by AI
+              models across various programming languages, including but not
+              limited to Python, Java, C++, C# and JavaScript
             </li>
             <li>
-             Provided detailed feedback on AI model performance and identified areas for improvement
+              Provided detailed feedback on AI model performance and identified
+              areas for improvement
             </li>
           </ul>
         </div>
@@ -193,43 +159,305 @@ function App() {
           <p className="spacing">Tire Service Technician</p>
           <ul className="work-description">
             <li>
-              Mounted, balanced, and repaired tires for consumer and commercial vehicles
+              Mounted, balanced, and repaired tires for consumer and commercial
+              vehicles
             </li>
             <li>
-              Provided customer service and collaborated effectively in a team-oriented environment
+              Provided customer service and collaborated effectively in a
+              team-oriented environment
             </li>
           </ul>
         </div>
+      </>
+    );
+  }
 
-        <h1 className="section-2" id="projects">Projects</h1>
+  function Education() {
+    return (
+      <>
+        <h1 className="experience-section">Education</h1>
+        <div className="work-container">
+          <p className="light-grey-small">Aug 2021 - May 2025</p>
+          <h3>Arizona State University - Tempe, Az</h3>
+          <p className="spacing">Bachelor of Science in Computer Science</p>
+          <ul className="work-description">
+            <li>3.4 GPA</li>
+            <li>Graduated with Cum Laude honors</li>
+          </ul>
+        </div>
+
+        <br />
+
+        <div className="work-container">
+          <p className="light-grey-small">Aug 2017 - May 2021</p>
+          <h3>Peoria High School - Peoria, Az</h3>
+          <p className="spacing">High School Diploma</p>
+          <ul className="work-description">
+            <li>3.8 GPA</li>
+          </ul>
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <Header />
+
+      <main className="main">
+        <div className="profile-container">
+          <img
+            src={profilePic}
+            alt="profile picture"
+            className="profile-picture"
+          />
+          <div>
+            <h1>
+              Hi, I'm Josue Caballero Sanchez{" "}
+              <span className="waving-hand">&#128075;</span>
+            </h1>
+            <h2>Computer Scientist and Web Developer</h2>
+          </div>
+        </div>
+
+        <p className="paragraph">
+          Hi there! I'm a 22 year old computer scientist located in Glendale,
+          Arizona. I am a recent graduate from Arizona State University and have
+          a strong expertise in web design, Java, C++, C#, and IT. Currently
+          working as an IT Intern with the City of Phoenix Water Services
+          Department, where I assist technicians in delivering technical support
+          via ServiceNow and enhance internal operations by developing
+          PowerShell scripts.
+        </p>
+
+        <div className="socials-container">
+          <a
+            href="https://www.canva.com/design/DAGpIipUkQU/5gvoO54v3nLZfh1KftXwpQ/view?utm_content=DAGpIipUkQU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h00289307b7"
+            target="_blank"
+            className="socials-button"
+          >
+            Resume
+          </a>
+          <a
+            href="https://www.linkedin.com/in/josue-caballero-sanchez-8aaab9276/"
+            target="_blank"
+            className="socials-icon"
+          >
+            <i
+              className="devicon-linkedin-plain colored"
+              style={{ fontSize: "30px" }}
+            ></i>
+          </a>
+          <a
+            href="https://github.com/Josue-Caballero-Sanchez"
+            target="_blank"
+            className="socials-icon"
+          >
+            <i
+              className="devicon-github-original"
+              style={{ fontSize: "30px" }}
+            ></i>
+          </a>
+        </div>
+
+        <h1 className="section-2">Tools and Skills</h1>
+        <div className="container">
+          <div className="skills-container">
+            <i
+              className="devicon-react-original colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>React</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-html5-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>HTML</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-css3-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>CSS</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-javascript-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>JavaScript</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-c-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>C</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-cplusplus-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>C++</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-csharp-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>C#</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-java-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>Java</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-webpack-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>Webpack</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-firebase-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>Firebase</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-postgresql-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>PostgreSQL</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-tailwindcss-original colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>Tailwind</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-dot-net-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>.Net</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-powershell-plain"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>PowerShell</p>
+          </div>
+          <div className="skills-container">
+            <i className="devicon-linux-plain" style={{ fontSize: "40px" }}></i>
+            <p>Linux</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-git-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>Git</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-github-original"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>GitHub</p>
+          </div>
+        </div>
+
+        <div className="slider-container" id="experience">
+          <button
+            className="toggle-button-selected"
+            id="experience-button"
+            onClick={HandleToggleButtonClick}
+          >
+            Work Experience
+          </button>
+          <button
+            className="toggle-button-not-selected"
+            id="education-button"
+            onClick={HandleToggleButtonClick}
+          >
+            Education
+          </button>
+        </div>
+
+        <div className={`stretch ${isFading ? "fade-out" : "fade-in"}`}>
+          {isSelected ? <Education /> : <WorkExperience />}
+        </div>
+
+        <h1 className="section-2" id="projects">
+          Projects
+        </h1>
         <div className="main-container">
           <div className="project-container">
             <img src={shoppingCart} alt="project image" />
             <div className="project-info-container">
               <h3>Shopping Cart Website</h3>
-              <p className="project-description">shopping cart application that lets users browse products, view details, and add items to their cart. Powered by the FakeStore API</p>
+              <p className="project-description">
+                shopping cart application that lets users browse products, view
+                details, and add items to their cart. Powered by the FakeStore
+                API
+              </p>
               <div className="tools-container">
                 <div>
-                  <i className="devicon-react-plain colored" style={{ fontSize: '35px' }}></i>
+                  <i
+                    className="devicon-react-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>React</p>
                 </div>
                 <div>
-                  <i className="devicon-html5-plain colored" style={{ fontSize: '35px' }}></i>
+                  <i
+                    className="devicon-html5-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>HTML</p>
                 </div>
                 <div>
-                  <i className="devicon-css3-plain colored" style={{ fontSize: '35px' }}></i>
+                  <i
+                    className="devicon-css3-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>CSS</p>
                 </div>
                 <div>
-                  <i className="devicon-javascript-plain colored" style={{ fontSize: '35px' }}></i>
+                  <i
+                    className="devicon-javascript-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>JavaScript</p>
                 </div>
               </div>
             </div>
             <div className="button-container">
-              <a href="https://2f1020f0.shopping-cart-3b6.pages.dev/" target="_blank">Live Demo</a>
-              <a href="https://github.com/Josue-Caballero-Sanchez/shopping-cart" target="_blank">GitHub Page</a>
+              <a
+                href="https://2f1020f0.shopping-cart-3b6.pages.dev/"
+                target="_blank"
+              >
+                Live Demo
+              </a>
+              <a
+                href="https://github.com/Josue-Caballero-Sanchez/shopping-cart"
+                target="_blank"
+              >
+                GitHub Page
+              </a>
             </div>
           </div>
 
@@ -237,16 +465,29 @@ function App() {
             <img src={graph} alt="project image" />
             <div className="project-info-container">
               <h3>Graph Data Structure</h3>
-              <p className="project-description">This project implements a graph data structure using JGraphT and Graphviz as well as JUnit for testing. It includes functionalities to create, modify, and query graphs as well as exporting them</p>
+              <p className="project-description">
+                This project implements a graph data structure using JGraphT and
+                Graphviz as well as JUnit for testing. It includes
+                functionalities to create, modify, and query graphs as well as
+                exporting them
+              </p>
               <div className="tools-container">
-              <div>
-                  <i className="devicon-java-plain colored" style={{ fontSize: '35px' }}></i>
+                <div>
+                  <i
+                    className="devicon-java-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>Java</p>
                 </div>
               </div>
             </div>
             <div className="button-container">
-              <a href="https://github.com/Josue-Caballero-Sanchez/graph-data-structure" target="_blank">GitHub Page</a>
+              <a
+                href="https://github.com/Josue-Caballero-Sanchez/graph-data-structure"
+                target="_blank"
+              >
+                GitHub Page
+              </a>
             </div>
           </div>
 
@@ -254,28 +495,49 @@ function App() {
             <img src={encrypt} alt="project image" />
             <div className="project-info-container">
               <h3>Encryption Service</h3>
-              <p className="project-description">This project is a RESTful WCF service for encrypting and decrypting messages with a front-end web page built using HTML, CSS, and JavaScript that calls the service</p>
+              <p className="project-description">
+                This project is a RESTful WCF service for encrypting and
+                decrypting messages with a front-end web page built using HTML,
+                CSS, and JavaScript that calls the service
+              </p>
               <div className="tools-container">
-              <div>
-                  <i className="devicon-csharp-plain colored" style={{ fontSize: '35px' }}></i>
+                <div>
+                  <i
+                    className="devicon-csharp-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>C#</p>
                 </div>
                 <div>
-                  <i className="devicon-dot-net-plain colored" style={{ fontSize: '35px' }}></i>
+                  <i
+                    className="devicon-dot-net-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>.Net</p>
                 </div>
                 <div>
-                  <i className="devicon-html5-plain colored" style={{ fontSize: '35px' }}></i>
+                  <i
+                    className="devicon-html5-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>HTML</p>
                 </div>
                 <div>
-                  <i className="devicon-javascript-plain colored" style={{ fontSize: '35px' }}></i>
+                  <i
+                    className="devicon-javascript-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>JavaScript</p>
                 </div>
               </div>
             </div>
             <div className="button-container">
-              <a href="https://github.com/Josue-Caballero-Sanchez/encryption-service" target="_blank">GitHub Page</a>
+              <a
+                href="https://github.com/Josue-Caballero-Sanchez/encryption-service"
+                target="_blank"
+              >
+                GitHub Page
+              </a>
             </div>
           </div>
 
@@ -283,25 +545,44 @@ function App() {
             <img src={blog} alt="project image" />
             <div className="project-info-container">
               <h3>Finance Website/Blog</h3>
-              <p className="project-description">Created a fully responsive finance website/blog with HTML, CSS, and JavaScript. Deployed and hosted using Hostinger.com</p>
+              <p className="project-description">
+                Created a fully responsive finance website/blog with HTML, CSS,
+                and JavaScript. Deployed and hosted using Hostinger.com
+              </p>
               <div className="tools-container">
                 <div>
-                  <i className="devicon-html5-plain colored" style={{ fontSize: '35px' }}></i>
+                  <i
+                    className="devicon-html5-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>HTML</p>
                 </div>
                 <div>
-                  <i className="devicon-css3-plain colored" style={{ fontSize: '35px' }}></i>
+                  <i
+                    className="devicon-css3-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>CSS</p>
                 </div>
                 <div>
-                  <i className="devicon-javascript-plain colored" style={{ fontSize: '35px' }}></i>
+                  <i
+                    className="devicon-javascript-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>JavaScript</p>
                 </div>
               </div>
             </div>
             <div className="button-container">
-              <a href="https://thefinancialposts.com/" target="_blank">Live Demo</a>
-              <a href="https://github.com/Josue-Caballero-Sanchez/the-financial-posts" target="_blank">GitHub Page</a>
+              <a href="https://thefinancialposts.com/" target="_blank">
+                Live Demo
+              </a>
+              <a
+                href="https://github.com/Josue-Caballero-Sanchez/the-financial-posts"
+                target="_blank"
+              >
+                GitHub Page
+              </a>
             </div>
           </div>
 
@@ -309,23 +590,34 @@ function App() {
             <img src={minHeap} alt="project image" />
             <div className="project-info-container">
               <h3>Min-Heap</h3>
-              <p className="project-description">This project implements a Min-Heap data structure in C++, supporting operations such as insertion, deletion, decreasing a key, and heap construction from a file</p>
+              <p className="project-description">
+                This project implements a Min-Heap data structure in C++,
+                supporting operations such as insertion, deletion, decreasing a
+                key, and heap construction from a file
+              </p>
               <div className="tools-container">
-              <div>
-                  <i className="devicon-cplusplus-plain colored" style={{ fontSize: '35px' }}></i>
+                <div>
+                  <i
+                    className="devicon-cplusplus-plain colored"
+                    style={{ fontSize: "35px" }}
+                  ></i>
                   <p>C++</p>
                 </div>
               </div>
             </div>
             <div className="button-container">
-              <a href="https://github.com/Josue-Caballero-Sanchez/min-heap-data-structure" target="_blank">GitHub Page</a>
+              <a
+                href="https://github.com/Josue-Caballero-Sanchez/min-heap-data-structure"
+                target="_blank"
+              >
+                GitHub Page
+              </a>
             </div>
           </div>
-          
         </div>
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
