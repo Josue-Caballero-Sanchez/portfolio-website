@@ -221,7 +221,7 @@ function App() {
 
         <p className="paragraph">
           Hi there! I'm a 22 year old computer scientist located in Glendale,
-          Arizona. I am a recent graduate from Arizona State University and have
+          Arizona. I am a recent computer science graduate from Arizona State University and have
           a strong expertise in web design, Java, C++, C#, and IT. Currently working 
           as an IT Intern with the City of Phoenix Water Services Department where I 
           provide technical support using ServiceNow, develop PowerShell scripts to support 
