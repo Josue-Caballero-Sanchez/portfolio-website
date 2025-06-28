@@ -38,7 +38,6 @@ function App() {
       return;
     }
 
-    //SetIsSelected(!isSelected)
     SetIsFading(true);
 
     setTimeout(() => {
@@ -126,8 +125,8 @@ function App() {
               ServiceNow
             </li>
             <li>
-              Collaborated on and created PowerShell scripts to support internal
-              operations within the Water Services Department
+              created PowerShell scripts to support internal operations within the Water Department and 
+              worked with the Applications team on database tasks using Oracle SQL
             </li>
           </ul>
         </div>
@@ -223,11 +222,10 @@ function App() {
         <p className="paragraph">
           Hi there! I'm a 22 year old computer scientist located in Glendale,
           Arizona. I am a recent graduate from Arizona State University and have
-          a strong expertise in web design, Java, C++, C#, and IT. Currently
-          working as an IT Intern with the City of Phoenix Water Services
-          Department, where I assist technicians in delivering technical support
-          via ServiceNow and enhance internal operations by developing
-          PowerShell scripts.
+          a strong expertise in web design, Java, C++, C#, and IT. Currently working 
+          as an IT Intern with the City of Phoenix Water Services Department where I 
+          provide technical support using ServiceNow, develop PowerShell scripts to support 
+          internal operations, and work with the Applications team on database tasks using Oracle SQL.
         </p>
 
         <div className="socials-container">
@@ -327,13 +325,6 @@ function App() {
           </div>
           <div className="skills-container">
             <i
-              className="devicon-firebase-plain colored"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>Firebase</p>
-          </div>
-          <div className="skills-container">
-            <i
               className="devicon-postgresql-plain colored"
               style={{ fontSize: "40px" }}
             ></i>
@@ -366,17 +357,17 @@ function App() {
           </div>
           <div className="skills-container">
             <i
-              className="devicon-git-plain colored"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>Git</p>
-          </div>
-          <div className="skills-container">
-            <i
               className="devicon-github-original"
               style={{ fontSize: "40px" }}
             ></i>
             <p>GitHub</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-git-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>Git</p>
           </div>
         </div>
 
