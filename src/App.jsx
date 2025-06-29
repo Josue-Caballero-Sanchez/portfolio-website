@@ -318,10 +318,10 @@ function App() {
           </div>
           <div className="skills-container">
             <i
-              className="devicon-webpack-plain colored"
+              className="devicon-oracle-plain colored"
               style={{ fontSize: "40px" }}
             ></i>
-            <p>Webpack</p>
+            <p>Oracle</p>
           </div>
           <div className="skills-container">
             <i
@@ -329,6 +329,13 @@ function App() {
               style={{ fontSize: "40px" }}
             ></i>
             <p>PostgreSQL</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-webpack-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>Webpack</p>
           </div>
           <div className="skills-container">
             <i
@@ -352,6 +359,13 @@ function App() {
             <p>PowerShell</p>
           </div>
           <div className="skills-container">
+            <i
+              className="devicon-unity-plain"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>Unity</p>
+          </div>
+          <div className="skills-container">
             <i className="devicon-linux-plain" style={{ fontSize: "40px" }}></i>
             <p>Linux</p>
           </div>
@@ -370,7 +384,6 @@ function App() {
             <p>Git</p>
           </div>
         </div>
-
         <div className="slider-container" id="experience">
           <button
             className="toggle-button-selected"
