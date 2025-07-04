@@ -125,7 +125,7 @@ function App() {
               ServiceNow
             </li>
             <li>
-              created PowerShell scripts to support internal operations within the Water Department and 
+              Created PowerShell scripts to support internal operations within the Water Department and 
               worked with the Applications team on database tasks using SQL
             </li>
           </ul>
