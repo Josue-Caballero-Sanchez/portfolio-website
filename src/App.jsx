@@ -96,7 +96,7 @@ function App() {
             </li>
             <li>
               <a href="#experience" onClick={handleHeaderButtonClick}>
-                Experience
+                {isSelected ? "Education" : "Experience"}
               </a>
             </li>
             <li>
@@ -126,7 +126,7 @@ function App() {
             </li>
             <li>
               created PowerShell scripts to support internal operations within the Water Department and 
-              worked with the Applications team on database tasks using Oracle SQL
+              worked with the Applications team on database tasks using SQL
             </li>
           </ul>
         </div>
@@ -225,7 +225,7 @@ function App() {
           a strong expertise in web design, Java, C++, C#, and IT. Currently working 
           as an IT Intern with the City of Phoenix Water Services Department where I 
           provide technical support using ServiceNow, develop PowerShell scripts to support 
-          internal operations, and work with the Applications team on database tasks using Oracle SQL.
+          internal operations, and work with the applications team on database tasks using SQL.
         </p>
 
         <div className="socials-container">
@@ -318,13 +318,6 @@ function App() {
           </div>
           <div className="skills-container">
             <i
-              className="devicon-oracle-plain colored"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>Oracle</p>
-          </div>
-          <div className="skills-container">
-            <i
               className="devicon-postgresql-plain colored"
               style={{ fontSize: "40px" }}
             ></i>
@@ -357,13 +350,6 @@ function App() {
               style={{ fontSize: "40px" }}
             ></i>
             <p>PowerShell</p>
-          </div>
-          <div className="skills-container">
-            <i
-              className="devicon-unity-plain"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>Unity</p>
           </div>
           <div className="skills-container">
             <i className="devicon-linux-plain" style={{ fontSize: "40px" }}></i>
