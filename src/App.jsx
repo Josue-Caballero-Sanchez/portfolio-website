@@ -290,8 +290,8 @@ function App() {
           </div>
           <div className="skills-container">
             <i
-              className="devicon-c-plain colored"
-              style={{ fontSize: "40px" }}
+              className="devicon-c-line"
+              style={{ fontSize: "35px" }}
             ></i>
             <p>C</p>
           </div>
