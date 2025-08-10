@@ -74,11 +74,18 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: #000;
   background-image:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent 60%),
-    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.1), transparent 70%),
-    linear-gradient(to right, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+    /* Subtle diagonal noise texture */
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.07) 0px,
+      rgba(255, 255, 255, 0.07) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    /* Main dark gradient */
+    linear-gradient(to right, black, rgb(15, 15, 15));
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
