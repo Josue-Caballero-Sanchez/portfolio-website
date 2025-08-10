@@ -74,14 +74,14 @@ html {
 }
 
 body {
-  background-color: black;
-  background-image: 
-    radial-gradient(white 1px, transparent 0),
-    radial-gradient(white 1px, transparent 0),
-    radial-gradient(white 1px, transparent 0);
-  background-size: 300px 300px, 400px 400px, 500px 500px;
-  background-position: 0 0, 100px 150px, 200px 100px;
-  animation: moveStars 180s linear infinite;
+  background-color: rgb(0, 0, 0);
+  background-image:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.04), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.03), transparent 70%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .navbar{
@@ -158,15 +158,6 @@ main {
   padding-bottom: 8rem;
 }
 
-@keyframes moveStars {
-  0% {
-    background-position: 0 0, 100px 150px, 200px 100px;
-  }
-  100% {
-    background-position: 1000px 500px, 1100px 650px, 1200px 600px;
-  }
-}
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -174,7 +165,7 @@ main {
   }
   60% {
     opacity: 1;
-    transform: translateY(-5px) scale(1.02); /* Slight bounce effect */
+    transform: translateY(-5px) scale(1.02);
   }
   100% {
     opacity: 1;
@@ -299,7 +290,6 @@ main {
   border: rgba(255, 255, 255, 0.2) 1px solid;
   border-radius: 1.25rem;
   padding: 1.5rem;
-  box-shadow: 0px 0px 10px black;
   flex: 1;
 }
 
