@@ -733,6 +733,18 @@ main {
   }
 }
 
+@media (min-width: 1375px){ 
+  .navbar {
+    padding-left: 29rem;
+    padding-right: 29rem;
+  }
+
+  main {
+    padding-left: 29rem;
+    padding-right: 29rem;
+  }
+}
+
 @media (min-width: 1425px){
   .navbar {
     padding-left: 31rem;
@@ -745,75 +757,87 @@ main {
   }
 }
 
-@media (min-width: 1500px){
+@media (min-width: 1475px){
   .navbar {
-    padding-left: 34rem;
-    padding-right: 34rem;
+    padding-left: 33rem;
+    padding-right: 33rem;
   }
 
   main {
-    padding-left: 34rem;
-    padding-right: 34rem;
+    padding-left: 33rem;
+    padding-right: 33rem;
+  }
+}
+
+@media (min-width: 1500px){
+  .navbar {
+    padding-left: 36rem;
+    padding-right: 36rem;
+  }
+
+  main {
+    padding-left: 36rem;
+    padding-right: 36rem;
   }
 }
 
 @media (min-width: 1600px){
   .navbar {
-    padding-left: 40rem;
-    padding-right: 40rem;
+    padding-left: 41rem;
+    padding-right: 41rem;
   }
 
   main {
-    padding-left: 40rem;
-    padding-right: 40rem;
+    padding-left: 41rem;
+    padding-right: 41rem;
   }
 }
 
 @media (min-width: 1700px){
   .navbar {
-    padding-left: 45rem;
-    padding-right: 45rem;
+    padding-left: 46rem;
+    padding-right: 46rem;
   }
 
   main {
-    padding-left: 45rem;
-    padding-right: 45rem;
+    padding-left: 46rem;
+    padding-right: 46rem;
   }
 }
 
 @media (min-width: 1800px){
   .navbar {
-    padding-left: 50rem;
-    padding-right: 50rem;
+    padding-left: 51rem;
+    padding-right: 51rem;
   }
 
   main {
-    padding-left: 50rem;
-    padding-right: 50rem;
+    padding-left: 51rem;
+    padding-right: 51rem;
   }
 }
 
 @media (min-width: 1900px){
   .navbar {
-    padding-left: 55rem;
-    padding-right: 55rem;
+    padding-left: 56rem;
+    padding-right: 56rem;
   }
 
   main {
-    padding-left: 55rem;
-    padding-right: 55rem;
+    padding-left: 56rem;
+    padding-right: 56rem;
   }
 }
 
 @media (min-width: 2000px){
   .navbar {
-    padding-left: 60rem;
-    padding-right: 60rem;
+    padding-left: 61rem;
+    padding-right: 61rem;
   }
 
   main {
-    padding-left: 60rem;
-    padding-right: 60rem;
+    padding-left: 61rem;
+    padding-right: 61rem;
   }
 }
 
