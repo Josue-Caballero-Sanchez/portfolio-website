@@ -75,20 +75,7 @@ html {
 
 body {
   background-color: #000;
-  background-image:
-    /* Subtle diagonal noise texture */
-    repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.07) 0px,
-      rgba(255, 255, 255, 0.07) 1px,
-      transparent 1px,
-      transparent 3px
-    ),
-    /* Main dark gradient */
-    linear-gradient(to right, black, rgb(15, 15, 15));
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-image: linear-gradient(to right, black, rgb(18, 18, 18));
 }
 
 .navbar{
