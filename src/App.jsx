@@ -120,13 +120,12 @@ function App() {
           <p className="spacing">IT Intern</p>
           <ul className="work-description">
             <li>
-              Provided technical support and troubleshooting by assisting
-              technicians resolve IT infrastructure issues for employees using
-              ServiceNow
+              Provided technical support and troubleshooting by assisting technicians resolve IT
+              infrastructure issues for employees using ServiceNow, PowerShell, and Active Directory
             </li>
             <li>
-              Created PowerShell scripts to support internal operations within the Water Department and 
-              worked with the Applications team on database tasks using SQL
+              Worked with the Applications team on database tasks using SQL and developed a Power
+              Apps application for managing third-party goods and service requests.
             </li>
           </ul>
         </div>
@@ -222,10 +221,9 @@ function App() {
         <p className="paragraph">
           Hi there! I'm a 22 year old computer scientist located in Glendale,
           Arizona. I am a recent computer science graduate from Arizona State University and have
-          a strong expertise in web design, Java, C++, C#, and IT. Currently working 
-          as an IT Intern with the City of Phoenix Water Services Department where I 
-          provide technical support using ServiceNow, develop PowerShell scripts to support 
-          internal operations, and work with the applications team on database tasks using SQL.
+          a strong expertise in web design, Java, C++, C#, and IT. Currently working as an IT Intern 
+          with the City of Phoenix Water Services Department where I provide technical support using ServiceNow, 
+          create PowerShell scripts, work with SQL, and develop Power Apps applications to support internal operations.
         </p>
 
         <div className="socials-container">
@@ -325,24 +323,24 @@ function App() {
           </div>
           <div className="skills-container">
             <i
-              className="devicon-webpack-plain colored"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>Webpack</p>
-          </div>
-          <div className="skills-container">
-            <i
-              className="devicon-tailwindcss-original colored"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>Tailwind</p>
-          </div>
-          <div className="skills-container">
-            <i
               className="devicon-dot-net-plain colored"
               style={{ fontSize: "40px" }}
             ></i>
             <p>.Net</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-git-plain colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>Git</p>
+          </div>
+          <div className="skills-container">
+            <i
+              className="devicon-github-original"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>GitHub</p>
           </div>
           <div className="skills-container">
             <i
@@ -354,20 +352,6 @@ function App() {
           <div className="skills-container">
             <i className="devicon-linux-plain" style={{ fontSize: "40px" }}></i>
             <p>Linux</p>
-          </div>
-          <div className="skills-container">
-            <i
-              className="devicon-github-original"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>GitHub</p>
-          </div>
-          <div className="skills-container">
-            <i
-              className="devicon-git-plain colored"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>Git</p>
           </div>
         </div>
         <div className="slider-container" id="experience">
