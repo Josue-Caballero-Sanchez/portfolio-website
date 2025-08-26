@@ -87,7 +87,7 @@ function App() {
           <ul className="navbar-links">
             <li>
               <a
-                href="https://www.canva.com/design/DAGpIipUkQU/5gvoO54v3nLZfh1KftXwpQ/view?utm_content=DAGpIipUkQU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h00289307b7"
+                href="https://www.canva.com/design/DAGw6L26bgM/y7F3Z6WwR3mj79l-D7U7kg/view?utm_content=DAGw6L26bgM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h598fa73dfa"
                 onClick={handleHeaderButtonClick}
                 target="_blank"
               >
@@ -228,7 +228,7 @@ function App() {
 
         <div className="socials-container">
           <a
-            href="https://www.canva.com/design/DAGpIipUkQU/5gvoO54v3nLZfh1KftXwpQ/view?utm_content=DAGpIipUkQU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h00289307b7"
+            href="https://www.canva.com/design/DAGw6L26bgM/y7F3Z6WwR3mj79l-D7U7kg/view?utm_content=DAGw6L26bgM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h598fa73dfa"
             target="_blank"
             className="socials-button"
           >
