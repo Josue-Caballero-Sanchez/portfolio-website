@@ -330,6 +330,13 @@ function App() {
           </div>
           <div className="skills-container">
             <i
+              className="devicon-windows11-original colored"
+              style={{ fontSize: "40px" }}
+            ></i>
+            <p>Active Directory</p>
+          </div>
+          <div className="skills-container">
+            <i
               className="devicon-git-plain colored"
               style={{ fontSize: "40px" }}
             ></i>
