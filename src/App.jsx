@@ -115,7 +115,7 @@ function App() {
       <>
         <h1 className="experience-section">Work Experience</h1>
         <div className="work-container">
-          <p className="light-grey-small">May 2025 - Present | Phoenix, Az</p>
+          <p className="light-grey-small">May 2025 - Present | Phoenix, AZ</p>
           <h3>City of Phoenix Water Services Department</h3>
           <p className="spacing">IT Intern</p>
           <ul className="work-description">
@@ -124,8 +124,11 @@ function App() {
               infrastructure issues for employees using ServiceNow, PowerShell, and Active Directory.
             </li>
             <li>
-              Worked with the Applications team on database tasks using SQL and developed a Power
-              Apps application for managing third-party goods and service requests.
+              Deployed, configured, and repaired various devices including laptops, desktops, and Toughbooks.
+            </li>
+            <li>
+              Worked with the Applications team on database tasks using SQL, solved SQL exercises, and developed
+              a Power Apps application for managing third-party goods/service requests.
             </li>
           </ul>
         </div>
@@ -152,7 +155,7 @@ function App() {
         <br />
 
         <div className="work-container">
-          <p className="light-grey-small">May 2019 - Mar 2023 | Peoria, Az</p>
+          <p className="light-grey-small">May 2019 - Mar 2023 | Peoria, AZ</p>
           <h3>Discount Tire</h3>
           <p className="spacing">Tire Service Technician</p>
           <ul className="work-description">
@@ -176,7 +179,7 @@ function App() {
         <h1 className="experience-section">Education</h1>
         <div className="work-container">
           <p className="light-grey-small">Aug 2021 - May 2025</p>
-          <h3>Arizona State University - Tempe, Az</h3>
+          <h3>Arizona State University - Tempe, AZ</h3>
           <p className="spacing">Bachelor of Science in Computer Science</p>
           <ul className="work-description">
             <li>3.4 GPA</li>
@@ -188,7 +191,7 @@ function App() {
 
         <div className="work-container">
           <p className="light-grey-small">Aug 2017 - May 2021</p>
-          <h3>Peoria High School - Peoria, Az</h3>
+          <h3>Peoria High School - Peoria, AZ</h3>
           <p className="spacing">High School Diploma</p>
           <ul className="work-description">
             <li>3.8 GPA</li>
