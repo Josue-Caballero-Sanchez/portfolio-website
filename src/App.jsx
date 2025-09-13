@@ -364,6 +364,7 @@ function App() {
             <p>Linux</p>
           </div>
         </div>
+        
         <div className="slider-container" id="experience">
           <button
             className="toggle-button-selected"
