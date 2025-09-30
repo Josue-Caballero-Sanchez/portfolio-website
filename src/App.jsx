@@ -217,7 +217,7 @@ function App() {
               Hi, I'm Josue Caballero Sanchez{" "}
               <span className="waving-hand">&#128075;</span>
             </h1>
-            <h2>Software & IT Professional</h2>
+            <h2>Software Developer & IT Professional</h2>
           </div>
         </div>
 
