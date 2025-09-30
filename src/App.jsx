@@ -115,7 +115,7 @@ function App() {
       <>
         <h1 className="experience-section">Work Experience</h1>
         <div className="work-container">
-          <p className="light-grey-small">May 2025 - Present | Phoenix, AZ</p>
+          <p className="light-grey-small">May 2025 - Sep 2025 | Phoenix, AZ</p>
           <h3>City of Phoenix Water Services Department</h3>
           <p className="spacing">IT Intern</p>
           <ul className="work-description">
@@ -217,16 +217,17 @@ function App() {
               Hi, I'm Josue Caballero Sanchez{" "}
               <span className="waving-hand">&#128075;</span>
             </h1>
-            <h2>Computer Scientist and Web Developer</h2>
+            <h2>Software & IT Professional</h2>
           </div>
         </div>
 
         <p className="paragraph">
           Hi there! I'm a 22 year old computer scientist located in Glendale,
-          Arizona. I am a recent computer science graduate from Arizona State University and have
-          a strong expertise in web design, Java, C++, C#, and IT. Currently working as an IT Intern 
-          with the City of Phoenix Water Services Department where I provide technical support using ServiceNow, 
-          create PowerShell scripts, work with SQL, and develop Power Apps applications to support internal operations.
+          Arizona. I am a Recent computer science graduate from Arizona State University
+          with a strong foundation in software development and IT. Through academics and professional
+          experience, I developed expertise in web design, Java, C++, C#, and IT support.
+          My recent IT internship strengthened my skills in troubleshooting, automation, and
+          database tasks, preparing me to contribute effectively in technology-driven environments.
         </p>
 
         <div className="socials-container">
