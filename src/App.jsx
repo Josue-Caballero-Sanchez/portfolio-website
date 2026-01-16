@@ -292,20 +292,6 @@ function App() {
           </div>
           <div className="skills-container">
             <i
-              className="devicon-c-original colored"
-              style={{ fontSize: "35px" }}
-            ></i>
-            <p>C</p>
-          </div>
-          <div className="skills-container">
-            <i
-              className="devicon-cplusplus-plain colored"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>C++</p>
-          </div>
-          <div className="skills-container">
-            <i
               className="devicon-csharp-plain colored"
               style={{ fontSize: "40px" }}
             ></i>
@@ -327,20 +313,6 @@ function App() {
           </div>
           <div className="skills-container">
             <i
-              className="devicon-dot-net-plain colored"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>.Net</p>
-          </div>
-          <div className="skills-container">
-            <i
-              className="devicon-windows11-original colored"
-              style={{ fontSize: "40px" }}
-            ></i>
-            <p>Active Directory</p>
-          </div>
-          <div className="skills-container">
-            <i
               className="devicon-git-plain colored"
               style={{ fontSize: "40px" }}
             ></i>
@@ -359,10 +331,6 @@ function App() {
               style={{ fontSize: "40px" }}
             ></i>
             <p>PowerShell</p>
-          </div>
-          <div className="skills-container">
-            <i className="devicon-linux-plain" style={{ fontSize: "40px" }}></i>
-            <p>Linux</p>
           </div>
         </div>
         
