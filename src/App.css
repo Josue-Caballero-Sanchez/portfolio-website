@@ -75,7 +75,7 @@ html {
 
 body {
   background-color: #000;
-  background-image: linear-gradient(to right, black, rgb(18, 18, 18));
+  background-image: linear-gradient(to right, black, rgb(20, 20, 20));
 }
 
 .navbar{
@@ -253,6 +253,12 @@ main {
   opacity: 0.6;
 }
 
+.email-text {
+  font-size: 1.35rem;
+  color: lightgray;
+  margin-top: 0.5rem;
+}
+
 .section-2 {
   align-self: stretch;
   margin-top: 3rem;
@@ -409,8 +415,8 @@ main {
 }
 
 .project-container:hover {
-  transform: scale(1.005);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); 
+  transform: translateY(-2px);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
 }
 
 .project-info-container p{
