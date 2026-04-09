@@ -1,0 +1,81 @@
+.skills__section__container {
+  display: grid;
+  gap: 1rem;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.skill__container {
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: bold;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgb(30, 30, 30);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill__container > p {
+  transition: transform 0.3s ease;
+}
+
+.skill__container:hover .skill__icon {
+  transform: translateX(-3px);
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+}
+.skill__container:hover > p{
+  transform: translateX(3px);
+}
+
+.skill__icon {
+  font-size: 3.25rem;
+  transition: transform 0.3s ease;
+}
+
+.react__icon {
+  color: rgb(97, 218, 251);
+}
+
+.html__icon {
+  color: rgb(229, 77, 38);
+}
+
+.css__icon {
+  color: rgb(61, 143, 198);
+}
+
+.javascript__icon {
+  color: rgb(240, 219, 79);
+}
+
+.typescript__icon {
+  color: rgb(0, 122, 204);
+}
+
+.nodejs__icon {
+  color: rgb(131, 205, 41)
+}
+
+.csharp__icon {
+  color: rgb(104, 33, 122)
+}
+
+.java__icon {
+  color: rgb(234, 45, 46);
+}
+
+.postgresql__icon {
+  color: rgb(51, 103, 145)
+}
+
+.git__icon {
+  color: rgb(243, 79, 41);
+}
+
+@media (max-width: 768px) {
+  .skills__section__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

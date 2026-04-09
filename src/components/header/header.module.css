@@ -89,7 +89,7 @@
     align-self: stretch;
     text-align: center;
 
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
   }
 
   .navbar__links__container > a {

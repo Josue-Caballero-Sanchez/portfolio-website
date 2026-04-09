@@ -3,3 +3,11 @@
   max-width: 75rem;
   margin: 0 auto;
 }
+
+.header__text {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

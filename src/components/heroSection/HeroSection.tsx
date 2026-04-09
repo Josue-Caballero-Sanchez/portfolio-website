@@ -1,5 +1,5 @@
 import profileImg from "../../assets/IMG_0377.jpeg";
-import styles from "./heroSection.module.css";
+import styles from "./HeroSection.module.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGoogleforms } from "react-icons/si";
 
@@ -9,7 +9,10 @@ function HeroSection() {
       <div className={styles.main__info__container}>
         <img className={styles.profile__image} src={profileImg} alt="" />
         <div>
-          <h1>Hi, I'm Josue Caballero Sanchez 👋</h1>
+          <h1>
+            Hi, I'm Josue Caballero Sanchez{" "}
+            <span className={styles.waving__hand}>👋</span>
+          </h1>
           <h3>Web Developer & IT Professional</h3>
         </div>
       </div>

@@ -1,5 +1,23 @@
 .section {
   font-size: 1.6rem;
+  opacity: 0;
+
+  animation: fadeInUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards; 
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95); 
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1); 
+  }
 }
 
 .profile__image {
@@ -25,6 +43,32 @@
   font-size: 2.5rem;
   font-weight: normal;
   margin-top: 0.25rem;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(0deg); }
+  60% { transform: rotate(20deg); }
+  80% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.waving__hand {
+  display: inline-block;
+  animation: wave 1s ease-in-out 2, fadeIn 0.5s ease forwards;
+  transform-origin: bottom right;
+  opacity: 0;
+  animation-delay: 1s, 1s;
 }
 
 .buttons__container {
