@@ -3,6 +3,7 @@ import Header from "../components/header/header";
 import HeroSection from "../components/heroSection/HeroSection";
 import SkillsSection from "../components/skillsSection/SkillsSection";
 import ExperienceSection from "../components/experienceSection/experienceSection";
+import Projects from "../components/projects/Projects";
 import styles from "./App.module.css";
 
 function App() {
@@ -39,6 +40,11 @@ function App() {
           </p>
           <ExperienceSection selectedTab={selectedTab} />
         </div>
+
+        <p className={styles.header__text} id="projects">
+          Projects
+        </p>
+        <Projects />
       </main>
     </>
   );

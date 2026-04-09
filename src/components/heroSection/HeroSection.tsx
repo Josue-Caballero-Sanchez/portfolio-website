@@ -25,12 +25,16 @@ function HeroSection() {
         my technical skills.
       </p>
       <div className={styles.buttons__container}>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://canva.link/i454i0eaewc4v94"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <SiGoogleforms size={18} />
           Resume
         </a>
         <a
-          href="https://www.linkedin.com/in/josue-caballero-sanchez/"
+          href="https://www.linkedin.com/in/josue-caballero-sanchez-8aaab9276/"
           target="_blank"
           rel="noopener noreferrer"
         >

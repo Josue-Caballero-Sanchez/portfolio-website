@@ -16,7 +16,7 @@ function Header() {
       >
         <div className={styles.main__header__container}>
           <div className={styles.header__container}>
-            <a href="#" className={styles.logo}>
+            <a href="" className={styles.logo}>
               Josue C
             </a>
             <button
@@ -31,9 +31,15 @@ function Header() {
               isMenuOpen ? styles.navbar__links__container__open : ""
             }`}
           >
-            <a href="">Resume</a>
+            <a
+              href="https://canva.link/i454i0eaewc4v94"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
             <a href="">Experience</a>
-            <a href="">Projects</a>
+            <a href="#projects">Projects</a>
           </nav>
         </div>
       </header>
