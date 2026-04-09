@@ -1,0 +1,44 @@
+.experience__section {
+  animation: fadeSlideIn 0.35s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.item__container {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  padding-left: 1rem;
+  font-size: 1.6rem;
+}
+
+.light__text {
+  color: gray;
+  font-size: 1.3rem;
+}
+
+.bold__text {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.margin__bottom {
+  margin-bottom: 0.5rem;
+}
+
+.item__container > ul {
+  margin-left: 1.5rem;
+}

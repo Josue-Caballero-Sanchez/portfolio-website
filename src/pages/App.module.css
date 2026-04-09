@@ -11,3 +11,41 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+.experience__header__text {
+  margin-top: 1rem;
+}
+
+.button__container {
+  margin-top: 3.5rem;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  padding: 0.25rem;
+  border-radius: 1rem;
+}
+
+.button__container > button {
+  background-color: transparent;
+  font-size: 1.6rem;
+  flex: 1;
+  color: black;
+  border: none;
+  padding: 0.35rem;
+  border-radius: 0.75rem;
+
+  transition: background-color 0.25s ease-out, color 0.25s ease-out, transform 0.1s ease-out;
+}
+
+.button__container > button:hover {
+  cursor: pointer;
+}
+
+.button__container > button:active {
+  transform: scale(0.96);
+}
+
+.button__container > .active {
+  background-color: black;
+  color: white;
+}
