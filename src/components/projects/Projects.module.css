@@ -32,7 +32,7 @@
 }
 
 .skill__icon {
-  font-size: 3rem;
+  font-size: 3.25rem;
 }
 
 .react__icon {
@@ -82,7 +82,7 @@
 .buttons__container {
   display: flex;
   gap: 0.75rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   flex-direction: column;
 }
 
@@ -111,5 +111,9 @@
 @media (max-width: 530px) {
   .projects__section {
     grid-template-columns: 1fr;
+  }
+
+  .buttons__container > a {
+    font-size: 1.8rem;
   }
 }

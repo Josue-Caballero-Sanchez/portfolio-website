@@ -110,4 +110,8 @@
     flex-direction: column;
     text-align: center;
   }
+
+  .buttons__container > a {
+    font-size: 1.8rem;
+  }
 }

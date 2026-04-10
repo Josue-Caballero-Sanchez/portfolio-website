@@ -96,6 +96,7 @@
     opacity: 0;
     transform: translateX(-20%);
     transition: transform 0.3s ease, opacity 0.3s ease;
+    font-size: 1.7rem;
   }
 
   .navbar__links__container > a:nth-child(1) { transition-delay: 0.1s; }
