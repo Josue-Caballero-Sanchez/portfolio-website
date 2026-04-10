@@ -78,4 +78,9 @@
   .skills__section__container {
     grid-template-columns: 1fr 1fr;
   }
+
+  .skill__container {
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
 }

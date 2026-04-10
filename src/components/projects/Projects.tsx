@@ -74,8 +74,8 @@ function Projects() {
           <p className={styles.project__title}>Battleship Web Game</p>
           <p>
             Battleship Web game created with HTML, CSS, JavaScript, and Webpack.
-            Features include placing your ships strategically, receiving visual
-            feedback during gameplay, and playing against a computer opponent.
+            Features include placing your ships, receiving visual feedback
+            during gameplay, and playing against a computer opponent.
           </p>
           <div className={styles.project__tech__container}>
             <FaHtml5 className={`${styles.html__icon} ${styles.skill__icon}`} />

@@ -11,14 +11,18 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header
+        experienceText={
+          selectedTab === "experience" ? "Experience" : "Education"
+        }
+      />
       <main className={styles.main}>
         <HeroSection />
 
         <p className={styles.header__text}>Tools & Skills</p>
         <SkillsSection />
 
-        <div className={styles.button__container}>
+        <div id="experience" className={styles.button__container}>
           <button
             className={selectedTab === "experience" ? styles.active : ""}
             onClick={() => setSelectedTab("experience")}
