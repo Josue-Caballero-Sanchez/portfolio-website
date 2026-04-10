@@ -14,6 +14,10 @@ function Header({ experienceText }: HeaderProps) {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  function handleNavLinkClick() {
+    setIsMenuOpen(false);
+  }
+
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (headerRef.current && !headerRef.current.contains(e.target as Node)) {
@@ -52,14 +56,14 @@ function Header({ experienceText }: HeaderProps) {
               href="https://canva.link/i454i0eaewc4v94"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={handleToggleButtonClick}
+              onClick={handleNavLinkClick}
             >
               Resume
             </a>
-            <a href="#experience" onClick={handleToggleButtonClick}>
+            <a href="#experience" onClick={handleNavLinkClick}>
               {experienceText}
             </a>
-            <a href="#projects" onClick={handleToggleButtonClick}>
+            <a href="#projects" onClick={handleNavLinkClick}>
               Projects
             </a>
           </nav>
