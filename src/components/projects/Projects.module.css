@@ -32,7 +32,10 @@
 }
 
 .skill__icon {
-  font-size: 3.25rem;
+  font-size: 3.5rem;
+  background-color: rgb(50, 50, 50);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .react__icon {
