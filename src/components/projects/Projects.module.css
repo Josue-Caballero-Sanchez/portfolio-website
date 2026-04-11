@@ -111,7 +111,7 @@
   transform: scale(1.02);
 }
 
-@media (max-width: 530px) {
+@media (max-width: 600px) {
   .project__title {
     font-size: 2.25rem;
   }
