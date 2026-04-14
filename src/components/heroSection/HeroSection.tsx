@@ -17,7 +17,7 @@ function HeroSection() {
         </div>
       </div>
       <p>
-        Hi there! I'm a 23 year old web developer & IT professional from
+        Hi there! I'm a 23 year old web developer and IT professional from
         Glendale, Arizona. Through academics and professional experience, I
         developed expertise in web design, Java, C#, and IT support. My current
         IT Specialist role has strengthened my skills in troubleshooting, system

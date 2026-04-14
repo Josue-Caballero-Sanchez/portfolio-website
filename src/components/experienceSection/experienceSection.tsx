@@ -14,21 +14,23 @@ function ExperienceSection({ selectedTab }: ExperienceSectionProps) {
           <p className={styles.margin__bottom}>Global Learning Opportunities</p>
           <ul>
             <li>
-              Manage IT infrastructure and users using Microsoft 365 Admin
+              Manage IT infrastructure and users with Microsoft 365 Admin
               Center, Intune, Entra ID, NinjaOne, and PowerShell. Provide
               comprehensive technical support including Windows troubleshooting,
-              printer management, device deployment, and system maintenance.
+              device deployment, system maintenance, printer management,
+              hardware upgrades for laptops, and setting up new employee
+              workstations.
             </li>
             <li>
-              Update and maintain the company website using WordPress and
-              Elementor while building custom business applications including an
-              Outlook add-in developed with React, TypeScript, Node.js, and
-              Express.
+              Develop custom business applications including an Outlook add-in
+              built with React, TypeScript, Node.js, and Express, while also
+              updating and maintaining the company website using WordPress and
+              Elementor.
             </li>
             <li>
-              Develop and implement automations within Monday.com to optimize
-              workflows while also providing ongoing support and troubleshooting
-              issues in Monday.com.
+              Develop and implement Monday.com automations to improve workflows,
+              along with providing support and troubleshooting within the
+              platform for users.
             </li>
           </ul>
         </div>
