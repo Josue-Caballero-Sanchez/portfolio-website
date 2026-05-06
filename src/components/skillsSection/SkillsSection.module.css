@@ -23,8 +23,9 @@
 
 .skill__container:hover .skill__icon {
   transform: translateX(-3px);
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 0 5px currentColor);
 }
+
 .skill__container:hover > p{
   transform: translateX(3px);
 }

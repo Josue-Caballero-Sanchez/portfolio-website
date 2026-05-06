@@ -21,16 +21,17 @@
   margin-top: 3.5rem;
   display: flex;
   width: 100%;
-  background-color: white;
+  background-color: rgb(40, 40, 40);
   padding: 0.25rem;
   border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .button__container > button {
   background-color: transparent;
   font-size: 1.6rem;
   flex: 1;
-  color: black;
+  color: white;
   border: none;
   padding: 0.35rem;
   border-radius: 0.75rem;
@@ -47,6 +48,6 @@
 }
 
 .button__container > .active {
-  background-color: rgb(30, 30, 30);
+  background-color: rgb(80, 80, 80);
   color: white;
 }
