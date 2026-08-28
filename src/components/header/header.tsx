@@ -53,12 +53,12 @@ function Header({ experienceText }: HeaderProps) {
             }`}
           >
             <a
-              href="https://canva.link/i454i0eaewc4v94"
+              href="https://github.com/Josue-Caballero-Sanchez"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleNavLinkClick}
             >
-              Resume
+              GitHub
             </a>
             <a href="#experience" onClick={handleNavLinkClick}>
               {experienceText}

@@ -8,16 +8,16 @@ import {
   FaJava,
 } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
-import { SiExpress, SiCplusplus, SiWebpack } from "react-icons/si";
+import { SiExpress, SiCplusplus, SiWebpack, SiNextdotjs } from "react-icons/si";
 import { CiGlobe } from "react-icons/ci";
 import { TbBrandCSharp } from "react-icons/tb";
-import { IoLogoJavascript } from "react-icons/io5";
+import { IoLogoJavascript, IoPerson } from "react-icons/io5";
 import { AiOutlineDotNet } from "react-icons/ai";
 import reactStorefront from "../../assets/react-storefront.png";
-import battleship from "../../assets/battleship.png";
 import graphDataStructure from "../../assets/graph-data-structure.png";
 import encryptionService from "../../assets/encryption-service.png";
 import minHeap from "../../assets/min-heap.png";
+import walletSprouts from "../../assets/wallet-sprouts.png";
 
 function Projects() {
   return (
@@ -69,29 +69,28 @@ function Projects() {
         </div>
       </div>
       <div className={styles.project__container}>
-        <img src={battleship} alt="Battleship Thumbnail" />
+        <img src={walletSprouts} alt="Wallet Sprouts Thumbnail" />
         <div className={styles.project__info__container}>
-          <p className={styles.project__title}>Battleship Web Game</p>
+          <p className={styles.project__title}>Finance Website</p>
           <p>
-            Battleship Web game created with HTML, CSS, JavaScript, and Webpack.
-            Features include placing your ships, receiving visual feedback
-            during gameplay, and playing against a computer opponent.
+            A production finance website built with Next.js and TypeScript.
+            Features a clean UI, reusable components, and interactive financial
+            calculators. Includes mortgage, auto loan, and other financial
+            tools.
           </p>
           <div className={styles.project__tech__container}>
+            <SiNextdotjs className={styles.skill__icon} />
+            <BiLogoTypescript
+              className={`${styles.typescript__icon} ${styles.skill__icon}`}
+            />
             <FaHtml5 className={`${styles.html__icon} ${styles.skill__icon}`} />
             <FaCss3Alt
               className={`${styles.css__icon} ${styles.skill__icon}`}
             />
-            <IoLogoJavascript
-              className={`${styles.javascript__icon} ${styles.skill__icon}`}
-            />
-            <SiWebpack
-              className={`${styles.webpack__icon} ${styles.skill__icon}`}
-            />
           </div>
           <div className={styles.buttons__container}>
             <a
-              href="https://josue-caballero-sanchez.github.io/battleship/dist/"
+              href="https://www.walletsprouts.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -99,12 +98,12 @@ function Projects() {
               Live Demo
             </a>
             <a
-              href="https://github.com/Josue-Caballero-Sanchez/battleship"
+              href="https://www.walletsprouts.com/about"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub />
-              GitHub Page
+              <IoPerson />
+              About Page
             </a>
           </div>
         </div>

@@ -7,7 +7,7 @@ import {
   FaGitAlt,
   FaGithub,
 } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
+import { SiExpress, SiNextdotjs } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
 import { TbBrandCSharp, TbBrandPowershell } from "react-icons/tb";
@@ -16,6 +16,10 @@ import styles from "./SkillsSection.module.css";
 function SkillsSection() {
   return (
     <section className={styles.skills__section__container}>
+      <div className={styles.skill__container}>
+        <SiNextdotjs className={styles.skill__icon} />
+        <p>Next.js</p>
+      </div>
       <div className={styles.skill__container}>
         <FaReact className={`${styles.react__icon} ${styles.skill__icon}`} />
         <p>React</p>

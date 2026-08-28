@@ -2,6 +2,7 @@ import profileImg from "../../assets/IMG_0377.jpeg";
 import styles from "./HeroSection.module.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGoogleforms } from "react-icons/si";
+import { MdEmail } from "react-icons/md";
 
 function HeroSection() {
   return (
@@ -26,14 +27,6 @@ function HeroSection() {
       </p>
       <div className={styles.buttons__container}>
         <a
-          href="https://canva.link/i454i0eaewc4v94"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SiGoogleforms size={18} />
-          Resume
-        </a>
-        <a
           href="https://www.linkedin.com/in/josue-caballero-sanchez-8aaab9276/"
           target="_blank"
           rel="noopener noreferrer"
@@ -48,6 +41,10 @@ function HeroSection() {
         >
           <FaGithub size={18} />
           GitHub
+        </a>
+        <a href="mailto:sanchez684.jc@gmail.com">
+          <MdEmail size={18} />
+          Email
         </a>
       </div>
       <p className={styles.email__text}>Email: sanchez684.jc@gmail.com</p>
