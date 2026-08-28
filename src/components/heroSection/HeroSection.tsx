@@ -1,7 +1,6 @@
 import profileImg from "../../assets/IMG_0377.jpeg";
 import styles from "./HeroSection.module.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiGoogleforms } from "react-icons/si";
 import { MdEmail } from "react-icons/md";
 
 function HeroSection() {

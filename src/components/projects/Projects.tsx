@@ -8,7 +8,7 @@ import {
   FaJava,
 } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
-import { SiExpress, SiCplusplus, SiWebpack, SiNextdotjs } from "react-icons/si";
+import { SiExpress, SiCplusplus, SiNextdotjs } from "react-icons/si";
 import { CiGlobe } from "react-icons/ci";
 import { TbBrandCSharp } from "react-icons/tb";
 import { IoLogoJavascript, IoPerson } from "react-icons/io5";
