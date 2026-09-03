@@ -3,7 +3,6 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaNodeJs,
-  FaJava,
   FaGitAlt,
   FaGithub,
 } from "react-icons/fa";
@@ -63,10 +62,6 @@ function SkillsSection() {
           className={`${styles.csharp__icon} ${styles.skill__icon}`}
         />
         <p>C#</p>
-      </div>
-      <div className={styles.skill__container}>
-        <FaJava className={`${styles.java__icon} ${styles.skill__icon}`} />
-        <p>Java</p>
       </div>
       <div className={styles.skill__container}>
         <FaGitAlt className={`${styles.git__icon} ${styles.skill__icon}`} />

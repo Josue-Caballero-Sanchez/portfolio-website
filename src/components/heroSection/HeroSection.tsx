@@ -17,12 +17,10 @@ function HeroSection() {
         </div>
       </div>
       <p>
-        Hi there! I'm a 23 year old web developer and IT professional from
-        Glendale, Arizona. Through academics and professional experience, I
-        developed expertise in web design, Java, C#, and IT support. My current
-        IT Specialist role has strengthened my skills in troubleshooting, system
-        administration, and software development, enabling me to further improve
-        my technical skills.
+        Hi there! I'm a full-stack web developer and IT Specialist from
+        Glendale, Arizona. Through my education and professional experience,
+        I've gained experience in software development, troubleshooting, and
+        system administration.
       </p>
       <div className={styles.buttons__container}>
         <a

@@ -8,7 +8,7 @@ import {
   FaJava,
 } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
-import { SiExpress, SiCplusplus, SiNextdotjs } from "react-icons/si";
+import { SiExpress, SiNextdotjs } from "react-icons/si";
 import { CiGlobe } from "react-icons/ci";
 import { TbBrandCSharp } from "react-icons/tb";
 import { IoLogoJavascript, IoPerson } from "react-icons/io5";
@@ -16,7 +16,6 @@ import { AiOutlineDotNet } from "react-icons/ai";
 import reactStorefront from "../../assets/react-storefront.png";
 import graphDataStructure from "../../assets/graph-data-structure.png";
 import encryptionService from "../../assets/encryption-service.png";
-import minHeap from "../../assets/min-heap.png";
 import walletSprouts from "../../assets/wallet-sprouts.png";
 
 function Projects() {
@@ -159,32 +158,6 @@ function Projects() {
           <div className={styles.buttons__container}>
             <a
               href="https://github.com/Josue-Caballero-Sanchez/graph-data-structure"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-              GitHub Page
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className={styles.project__container}>
-        <img src={minHeap} alt="Min Heap Thumbnail" />
-        <div className={styles.project__info__container}>
-          <p className={styles.project__title}>Min Heap Data Structure</p>
-          <p>
-            This project implements a Min-Heap data structure in C++, supporting
-            operations such as insertion, deletion, decreasing a key, and heap
-            construction from a file.
-          </p>
-          <div className={styles.project__tech__container}>
-            <SiCplusplus
-              className={`${styles.cplusplus__icon} ${styles.skill__icon}`}
-            />
-          </div>
-          <div className={styles.buttons__container}>
-            <a
-              href="https://github.com/Josue-Caballero-Sanchez/min-heap-data-structure"
               target="_blank"
               rel="noopener noreferrer"
             >
