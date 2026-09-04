@@ -17,7 +17,7 @@ function HeroSection() {
         </div>
       </div>
       <p>
-        Hi there! I'm a full-stack web developer and IT Specialist from
+        Hi there! I'm a full-stack web developer and IT specialist from
         Glendale, Arizona. Through my education and professional experience,
         I've gained experience in software development, troubleshooting, and
         system administration.
